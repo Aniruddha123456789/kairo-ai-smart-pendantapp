@@ -1,1 +1,40 @@
-The AI Smart Pendant is a compact, low-cost wearable device designed to act as a "second brain"1. It solves the problem of forgetting key details from conversations or meetings by listening, remembering, and helping users recall key moments2.This project integrates embedded hardware with a powerful AI/ML pipeline to capture ambient audio, process it, and provide actionable insights like transcriptions and summaries333.✨ Key FeaturesHands-Free Audio Capture: Records ambient audio seamlessly using a high-precision microphone444.AI-Powered Insights: Automatically generates transcriptions, conversation summaries, and keyword tags5.Cost-Effective: Built with readily available components for a total cost under ₹7096666.Secure Storage: Data is stored locally on an SD card or transferred securely via Bluetooth/Wi-Fi7777.Cross-Platform Access: Logs and summaries are accessible via a mobile or desktop application88.Open Source: Built on Arduino-compatible hardware for custom development9.⚙️ How It Works (Workflow)The system follows a 5-step pipeline 10:Audio Capture: The INMP441 microphone records ambient sound11.Processing & Storage: The ESP32-C3 microcontroller manages recording and saves data to a Micro SD card12.Data Transfer: Audio files are sent to the application/PC via Bluetooth or Wi-Fi13.AI/ML Processing: The backend engine performs transcription, summarization, and keyword extraction14.User Interface: Users view their logs and insights through the web or mobile app15151515.🛠️ Tech StackEmbedded (Firmware)Microcontroller: ESP32-C3 (RISC-V)1616.IDE: Arduino IDE17.Protocols: I2S (Recording), SPI (SD Card), Bluetooth Serial/Wi-Fi HTTP (Transfer)18181818.AI & Backend PipelineThe software architecture leverages open-source tools to avoid licensing costs19.Transcription (STT): Vosk (Offline Speech-to-Text)20.Summarization: HuggingFace Transformers (T5 and BART models)21.Keyword Extraction: KeyBERT / RAKE22.Emotion Analysis: pyAudioAnalysis / librosa (Optional)23.API/Backend: FastAPI or Flask24.Database: Firebase or SQLite25.🔌 Hardware Components (BOM)The total estimated build cost is ₹70926.ComponentDescriptionEst. Price (INR)ESP32-C3 Dev BoardWi-Fi + BLE MCU₹257 27272727INMP441 MicrophoneI2S MEMS Mic₹138 28282828Micro SD ModuleSPI Interface₹39 29292929SD Card (8GB)Audio Storage₹150 30303030Lithium Battery3.7V Rechargeable₹90 31313131TP4056 ModuleBattery Charging₹35 32323232Wiring GuideMic (INMP441) to ESP32: Connected via I2S (Data, BCLK, LRCL)33.SD Module to ESP32: Connected via SPI (CS, MISO, MOSI, SCK)34.Power: Battery connects to ESP32 via the TP4056 charging module35.🚀 Use CasesProfessional: Record meetings and push summaries to Slack/Email36.Student/Academic: Review lectures and extract keynotes.Child Safety: Monitor emotional tones and detect stress cues37.Elderly Care: Assist with recalling medical instructions38.Mental Health: Audio journaling and emotion trend analysis39.🔮 Future RoadmapOn-Device Transcription: Implement Edge AI for privacy and speed40.Voice Commands: "Note this" trigger for instant highlighting41.Multilingual Support: Support for global languages42.
+🧠 AI Smart Pendant
+
+A low-cost wearable "second brain" that captures, remembers, and summarizes your daily conversations. 
+
+🚀 Overview
+The AI Smart Pendant is a compact device (under ₹709) that records ambient audio and processes it using AI to provide transcriptions and key summaries. It is designed to help with memory recall, meeting notes, and personal journaling.
+
+
+
+
+🛠️ Tech Stack
+
+Hardware: ESP32-C3 (MCU), INMP441 (Mic), Micro SD Module, TP4056 (Charging).
+
+
+
+
+
+Firmware: Arduino IDE (C++).
+
+
+AI Pipeline: Python, Vosk (Offline STT), HuggingFace Transformers (Summarization).
+
+
+
+Backend: FastAPI / Flask.
+
+✨ Key Features
+
+Hands-Free Recording: Seamless ambient audio capture.
+
+
+AI Insights: Automated transcription, summarization, and emotion detection.
+
+
+
+Privacy-First: Local SD card storage with secure Bluetooth/Wi-Fi transfer.
+
+
+Open Source: Fully customizable hardware and software.
